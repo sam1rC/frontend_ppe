@@ -1,7 +1,8 @@
-let correo,clave,formulario
+let correo,clave,formulario,btn_enviar
 
 window.onload = function()
 {
+	btn_enviar = document.getElementById("btn_enviar");
 	correo = document.getElementById("correo");
 	clave = document.getElementById("clave");
 	formulario = document.getElementById("formulario");
@@ -23,4 +24,5 @@ function procesarRegistro(evento){
 	str_usuario = JSON.stringify(usuario);
 	localStorage.setItem("usuario",str_usuario);
 
+	evento.preventDefault();
 }
