@@ -20,4 +20,16 @@ function procesarLogin()
 
 	str_usuario = localStorage.getItem("usuario");
 	usuario = JSON.parse(str_usuario)
+
+	if(usuario)
+	{
+		if(usuario.correo == txt_correo && usuario.clave == txt_clave)
+		{
+			window.alert("Logeado :)");
+		}
+		else
+		{
+			window.alert("Intenta nuevamente");
+		}
+	}
 }
