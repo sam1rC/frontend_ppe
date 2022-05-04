@@ -25,6 +25,7 @@ function procesarLogin()
 	{
 		if(usuario.correo == txt_correo && usuario.clave == txt_clave)
 		{
+			cambiarSesion(true);
 			window.alert("Logeado :)");
 		}
 		else
